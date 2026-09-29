@@ -1,0 +1,111 @@
+/* Layout helpers shared by inner pages */
+.largeCopy {
+  font-size: var(--text-lg);
+  line-height: 1.65;
+  color: var(--color-charcoal);
+}
+
+[data-tone="dark"] .largeCopy {
+  color: var(--color-on-dark-muted);
+}
+
+.statement {
+  max-width: 28ch;
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-navy);
+}
+
+[data-tone="dark"] .statement {
+  color: var(--color-white);
+}
+
+.display {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--color-navy);
+}
+
+.accent {
+  color: var(--color-teal-700);
+}
+
+.stack {
+  display: grid;
+  gap: clamp(40px, 5vw, 64px);
+}
+
+.more {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.orderedList {
+  display: grid;
+  gap: 16px;
+  padding-left: 1.4em;
+  font-size: var(--text-lg);
+  color: var(--color-charcoal);
+}
+
+.orderedList li::marker {
+  font-weight: 600;
+  color: var(--color-teal-700);
+}
+
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chips li {
+  padding: 8px 16px;
+  border: 1px solid var(--color-line-strong);
+  border-radius: var(--radius-pill);
+  font-size: var(--text-sm);
+}
+
+.empty {
+  padding: 40px;
+  border: 1px dashed var(--color-line-strong);
+  border-radius: var(--radius-md);
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.note {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.links a {
+  display: inline-flex;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--color-teal-100);
+  color: var(--color-navy);
+  font-weight: 500;
+  font-size: var(--text-sm);
+}
+
+.links a:hover {
+  background: var(--color-teal);
+  color: var(--color-white);
+}

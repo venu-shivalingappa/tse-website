@@ -1,0 +1,26 @@
+.section {
+  position: relative;
+}
+
+.default {
+  padding-block: var(--section-space);
+}
+
+.tight {
+  padding-block: calc(var(--section-space) * 0.6);
+}
+
+.light {
+  background: var(--color-bg);
+  color: var(--color-ink);
+}
+
+.warm {
+  background: var(--color-bg-warm);
+  color: var(--color-ink);
+}
+
+.dark {
+  background: var(--color-navy-900);
+  color: var(--color-on-dark);
+}

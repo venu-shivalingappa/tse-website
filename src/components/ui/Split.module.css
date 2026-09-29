@@ -1,0 +1,29 @@
+.split {
+  display: grid;
+  gap: 40px;
+}
+
+@media (min-width: 1024px) {
+  .split {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 48px;
+  }
+
+  .aside {
+    grid-column: 1 / span 5;
+  }
+
+  .main {
+    grid-column: 7 / -1;
+  }
+}
+
+.aside > header {
+  margin-bottom: 0;
+}
+
+.main {
+  display: grid;
+  gap: 28px;
+  align-content: start;
+}

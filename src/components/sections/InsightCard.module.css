@@ -1,0 +1,7 @@
+.meta {
+  display: flex;
+  gap: 8px;
+  margin-top: auto;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}

@@ -1,0 +1,27 @@
+.nav {
+  font-size: var(--text-sm);
+  color: var(--color-on-dark-muted);
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.item + .item::before {
+  content: "/";
+  margin-right: 6px;
+  opacity: 0.5;
+}
+
+.link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+}
+
+.link:hover {
+  color: var(--color-white);
+}

@@ -1,0 +1,71 @@
+/* Shared card surface used by the card components */
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  padding: clamp(24px, 3vw, 36px);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-white);
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.interactive:hover,
+.interactive:focus-within {
+  border-color: var(--color-teal);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-2px);
+}
+
+/* Whole-card click target while keeping one accessible link */
+.stretched::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.stretched:focus-visible {
+  box-shadow: none;
+}
+
+.interactive:has(.stretched:focus-visible) {
+  box-shadow: var(--focus-ring);
+}
+
+.index {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-teal-700);
+}
+
+.label {
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-teal-700);
+}
+
+.title {
+  font-size: clamp(1.25rem, 1.05rem + 0.6vw, 1.625rem);
+  line-height: 1.2;
+  color: var(--color-navy);
+}
+
+.body {
+  color: var(--color-muted);
+}
+
+.more {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 8px;
+  font-weight: 600;
+  color: var(--color-navy);
+}

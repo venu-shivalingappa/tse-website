@@ -1,0 +1,35 @@
+.steps {
+  list-style: none;
+  display: grid;
+  border-top: 1px solid var(--color-line-strong);
+}
+
+.step {
+  display: grid;
+  gap: 8px 32px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--color-line);
+}
+
+@media (min-width: 800px) {
+  .step {
+    grid-template-columns: 80px minmax(0, 1fr) minmax(0, 1.4fr);
+    align-items: baseline;
+  }
+}
+
+.number {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  color: var(--color-teal-700);
+}
+
+.title {
+  font-size: var(--text-xl);
+  color: var(--color-navy);
+}
+
+.body {
+  font-size: var(--text-lg);
+  color: var(--color-muted);
+}

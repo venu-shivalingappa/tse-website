@@ -1,0 +1,9 @@
+.card {
+  gap: 20px;
+  padding: clamp(28px, 4vw, 48px);
+  background: var(--color-white);
+}
+
+.title {
+  font-size: var(--text-2xl);
+}

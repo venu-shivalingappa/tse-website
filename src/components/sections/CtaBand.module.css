@@ -1,0 +1,36 @@
+.band {
+  position: relative;
+  overflow: hidden;
+  padding-block: var(--section-space);
+  background:
+    radial-gradient(900px 480px at 0% 100%, rgba(82, 177, 160, 0.22), transparent 60%),
+    var(--color-navy);
+  color: var(--color-white);
+}
+
+.graphic {
+  position: absolute;
+  right: -40px;
+  bottom: -80px;
+  width: min(40vw, 440px);
+  color: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 28px;
+  max-width: 760px;
+}
+
+.title {
+  font-size: var(--text-3xl);
+}
+
+.body {
+  font-size: var(--text-lg);
+  color: var(--color-on-dark-muted);
+}

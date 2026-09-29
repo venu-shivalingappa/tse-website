@@ -1,0 +1,22 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 28px;
+  border-top: 2px solid var(--color-teal);
+}
+
+.index {
+  font-family: var(--font-display);
+  font-size: var(--text-sm);
+  color: var(--color-teal);
+}
+
+.title {
+  font-size: var(--text-2xl);
+}
+
+.body {
+  font-size: var(--text-lg);
+  color: var(--color-on-dark-muted);
+}

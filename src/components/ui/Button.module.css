@@ -1,0 +1,97 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s var(--ease), color 0.2s var(--ease), border-color 0.2s var(--ease),
+    transform 0.2s var(--ease);
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.md {
+  min-height: 48px;
+  padding: 12px 22px;
+  font-size: var(--text-md);
+}
+
+.lg {
+  min-height: 54px;
+  padding: 12px 28px;
+  font-size: 1.25rem;
+}
+
+.arrow {
+  transition: transform 0.2s var(--ease);
+}
+
+.button:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* Figma node 24:10 — hero "Talk to TSE" */
+.hero {
+  min-width: 219px;
+  background: var(--color-teal-100);
+  border-color: var(--color-teal-border);
+  color: var(--color-ink);
+}
+
+.hero:hover {
+  background: var(--color-white);
+}
+
+.primary {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.primary:hover {
+  background: var(--color-teal-700);
+}
+
+.secondary {
+  background: transparent;
+  border-color: var(--color-line-strong);
+  color: var(--color-navy);
+}
+
+.secondary:hover {
+  border-color: var(--color-navy);
+}
+
+.onDark {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.5);
+  color: var(--color-white);
+}
+
+.onDark:hover {
+  border-color: var(--color-white);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.text {
+  min-height: 44px;
+  padding: 8px 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 6px;
+}
+
+.text:hover {
+  text-decoration-thickness: 2px;
+}

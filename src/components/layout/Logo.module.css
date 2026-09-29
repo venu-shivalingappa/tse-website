@@ -1,0 +1,43 @@
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 3px;
+  color: var(--color-white);
+}
+
+/* Figma: 101.822 × 45.225 */
+.mark {
+  position: relative;
+  display: block;
+  width: 101.822px;
+  height: 45.225px;
+}
+
+.layer {
+  position: absolute;
+}
+
+.engine {
+  inset: 77.01% 0 2.62% 50.49%;
+}
+
+.solve {
+  inset: 39.35% 7.3% 40.28% 49.64%;
+}
+
+.tech {
+  inset: 1.86% 15.78% 77.77% 49.87%;
+}
+
+.symbol {
+  inset: 0 55.58% 0 0;
+}
+
+/* Figma: Poppins 8.016px, tracking 1.9237px — set in Inter per brand typography */
+.tagline {
+  font-family: var(--font-body);
+  font-size: 8px;
+  letter-spacing: 1.92px;
+  line-height: 1.2;
+  white-space: nowrap;
+}

@@ -1,0 +1,33 @@
+.card {
+  min-height: 320px;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.metric {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-line);
+}
+
+.metricValue {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-teal-700);
+}
+
+.metricLabel {
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}

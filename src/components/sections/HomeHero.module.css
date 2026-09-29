@@ -1,0 +1,209 @@
+/* Figma node 12:11 — 1728 × 1117 frame, content inset 154px */
+.hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: max(100svh, 680px);
+  overflow: hidden;
+  background: var(--color-navy-900);
+  color: var(--color-white);
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+/* Legibility scrim — keeps white copy AA over the brightest lava frames */
+.scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    linear-gradient(90deg, rgba(8, 12, 28, 0.62) 0%, rgba(8, 12, 28, 0.32) 45%, rgba(8, 12, 28, 0) 75%),
+    linear-gradient(180deg, rgba(8, 12, 28, 0.45) 0%, rgba(8, 12, 28, 0) 22%, rgba(8, 12, 28, 0) 70%, rgba(8, 12, 28, 0.55) 100%);
+}
+
+.inner {
+  display: grid;
+  gap: 56px;
+  width: 100%;
+  max-width: calc(var(--container-max) + var(--gutter) * 2);
+  margin-inline: auto;
+  padding: calc(var(--header-h) + 48px) var(--gutter) 140px;
+}
+
+@media (min-width: 1024px) {
+  .inner {
+    grid-template-columns: minmax(0, 703px) 1fr;
+    align-items: end;
+  }
+}
+
+/* Figma node 12:15 — width 703px */
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+  max-width: 703px;
+}
+
+/* Figma node 12:16 — gap 45px */
+.headline {
+  display: flex;
+  flex-direction: column;
+  gap: 45px;
+}
+
+.h1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35em;
+  line-height: 0.9;
+}
+
+/* Figma: 60px bold, leading 0.9 */
+.h1Main {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+/* Figma: 32px regular */
+.h1Sub {
+  font-size: var(--text-xl);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+/* Figma node 12:18 — Inter 22px / 1.6, 80% opacity */
+.body {
+  max-width: 62ch;
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 32px;
+}
+
+.ctas .secondary {
+  color: var(--color-white);
+  font-size: var(--text-md);
+}
+
+/* Figma node 15:158 — right-aligned list, Roboto 32 / 38.4, tracking -0.96 */
+.pillars {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+@media (min-width: 1024px) {
+  .pillars {
+    align-items: flex-end;
+    justify-self: end;
+  }
+}
+
+.pillar {
+  display: inline-flex;
+  align-items: center;
+  gap: 20px;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 1.1rem + 1vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  transition: opacity 0.2s var(--ease);
+}
+
+.pillar:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 1023px) {
+  .pillar {
+    flex-direction: row-reverse;
+  }
+}
+
+/* Figma: 30 × 30 icon containers */
+.pillarIcon {
+  position: relative;
+  display: block;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.pillarGlyph {
+  position: absolute;
+  mask-repeat: no-repeat;
+  -webkit-mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+  -webkit-mask-size: 100% 100%;
+}
+
+.quality,
+.ownership {
+  inset: 0;
+}
+
+/* Figma node 15:190 — inset 0 16.29% 0.07% 16.33% */
+.ethics {
+  inset: 0 16.29% 0.07% 16.33%;
+}
+
+/* Figma node 12:13 — black, blur 7px, 24px padding, bottom 45px */
+.continue {
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  border-radius: var(--radius-pill);
+  background: #000;
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  transform: translateX(-50%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .continue {
+    animation: nudge 2.8s var(--ease) 1.5s 3;
+  }
+}
+
+@keyframes nudge {
+  0%,
+  70%,
+  100% {
+    transform: translate(-50%, 0);
+  }
+  80% {
+    transform: translate(-50%, 6px);
+  }
+}
+
+@media (max-width: 599px) {
+  .continue {
+    padding: 16px;
+    bottom: 28px;
+  }
+}
